@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *int print_last_digit - prints the last digit of a number
- *@c: Integer parameter
+ *print_last_digit - prints the last digit of a number
+ *@i: Integer parameter
  *
  *Return: always j
  *
@@ -15,5 +15,5 @@ int print_last_digit(int i)
 	j = i % 10;
 	if (j < 0)
 		j = -j;
-	return(j);
+	return (j);
 }
