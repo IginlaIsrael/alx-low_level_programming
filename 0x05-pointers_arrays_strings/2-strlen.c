@@ -2,7 +2,7 @@
 
 /**
  * _strlen - prints the length of strings
- *
+ *@s: parameter to be printed
  * Return: 0
  */
 
