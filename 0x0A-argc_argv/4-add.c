@@ -1,27 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+
 /**
- * add - Adds positive integers
- * @str: a string variable
- *
- * Return: is 0 when successful
+ * addition - checks and adds numbers
+ * @s: string parameter to be checked
+ * Return: 0 when true or successful
  */
-int add(char *str)
+
+int addition(const char *s)
 {
-	unsigned int w;
-
-	w = 0;
-	while (w < strlen(str))
-
+	while (*s != '\0')
 	{
-		if (!isdigit(str[w]))
-		{
+		if (*s < '\0' || *s > '9')
 			return (0);
-		}
-
-		w++;
+		s++;
 	}
 	return (1);
+}
+
+/**
+ * main - adds numbers
+ * @argc: The number of command line arguments passed
+ * @argv: The array of size argc
+ * Return: 0 when succesful
+ */
+
+int main(int argc, char **argv)
+{
+	int z = 0, w = 0;
+
+	while (z < argc)
+	{
+		if (addition(argv[z]) == 0)
+		{
+			puts("Error");
+			return (1);
+		}
+		w = w + atoi(argv[z]);
+		z++;
+	}
+	printf("%d", w);
+	return (0);
 }
