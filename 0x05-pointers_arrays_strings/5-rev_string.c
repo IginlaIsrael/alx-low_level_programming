@@ -9,6 +9,7 @@
 void rev_string(char *s)
 {
 	int i = 0, len = 0;
+	char drake;
 
 	while (*s)
 	{
@@ -22,7 +23,6 @@ void rev_string(char *s)
 	for (i = 0 ; i < (len / 2); i++)
 	{
 		int me = len - 1;
-		int drake;
 
 		drake = s[me - i];
 		s[me - i] = s[i];
