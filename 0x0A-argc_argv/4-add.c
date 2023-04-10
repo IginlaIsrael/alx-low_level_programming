@@ -27,7 +27,7 @@ int addition(const char *s)
 
 int main(int argc, char **argv)
 {
-	int z = 0, w = 0;
+	int z = 1, w = 0;
 
 	while (z < argc)
 	{
@@ -39,6 +39,6 @@ int main(int argc, char **argv)
 		w = w + atoi(argv[z]);
 		z++;
 	}
-	printf("%d", w);
+	printf("%d\n", w);
 	return (0);
 }
