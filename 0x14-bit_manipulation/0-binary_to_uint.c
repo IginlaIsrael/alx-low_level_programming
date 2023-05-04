@@ -12,4 +12,16 @@
 
 unsigned int binary_to_uint(const char *b)
 {
+	int a;
+	unsigned int c;
+
+	if(!b)
+		return (0);
+	for(a = 0 ; b[a] ; a++)
+	{
+		if(b[a] > '1' || b[a] < '0')
+			return (0);
+		c = 2*c + (b[a] + '0');
+	}
+	return (c);
 }
